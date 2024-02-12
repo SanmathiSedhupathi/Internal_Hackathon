@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#logo1{
+    max-width: 100%;
+    height: auto;
+}
+.login-button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 8px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .btn{
+    padding-right: 40px;
+  }
+  .guest{
+    padding-right: 20px;
+  }
+  .login-button:hover {
+    background-color: white;
+    color: navy;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+.show_bg2{
+    background-image: url(bhavani.jpg);
+    min-height: 40%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+/*Aims*/
+.pop{
+    transition: .5s;
+    transition: transform .2s; 
+}
+.pop:hover{
+    transform: scale(1.2);
+}
+/*Vision and mission*/
+  .main{
+    width: 100%;
+    height: 300px;
+  }    
+  .div1{
+    background-color: #ebeced;
+    width: 45%;
+    float: left;
+    margin-left: 90px ;
+    height: 200px;
+    border-radius: 10px;
+    max-width: 600px;
+  } 
+  .div2{
+    background-color: #ebeced;
+    width: 45%;
+    float: right;
+    margin-right: 90px;
+    height: 200px;
+    border-radius: 10px;
+   
+  }
+  
+
+  /* Media queries for responsiveness */
+@media only screen and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-top: 10px; /* Adjust spacing for button */
+    }
+    .div1{
+      margin-bottom: 25px;
+      justify-self: center;
+    }
+    .div1,.div2{
+      width: fit-content;
+      height: fit-content;
+    }
+}
+  
