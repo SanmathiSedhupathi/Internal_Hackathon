@@ -1,0 +1,376 @@
+<html>
+<head>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+<style>
+   * {
+      padding: 0;
+      margin: 0;
+  }
+  
+  /*Navbar*/
+  body {
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+     
+  }
+  
+  #logo1 {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+  }
+  
+  .navbar {
+   text-align: right; /* Aligning navbar links to the right */
+   position: absolute; /* Positioning the navbar */
+   top: 0; /* Aligning it to the top of the page */
+   right: 20px; /* Adjust as needed */
+   z-index: 999; /* Ensuring it's on top of other elements */
+}
+
+.navbar a {
+   padding: 20px 15px; /* Adjust padding for better spacing */
+   color: navy;
+   font-family: Tahoma, sans-serif;
+   text-decoration: none;
+   font-size: 28px;
+}
+
+.navbar a:hover {
+   color: red;
+   text-shadow: 2px 2px 5px #949494;
+}
+
+
+  .main {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .connect {
+      height: 40vh;
+      display: flex;
+      place-items: center;
+      background: navy;
+      font-family: 'Nunito', sans-serif;
+  }
+  
+  footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #f0f0f0; /* Adjust as needed */
+      padding: 20px;
+  }
+  
+  .address {
+      color: white;
+      font-size: 22px;
+      line-height: 35px;
+      position: relative;
+      left: 650px;
+  }
+  
+  .address a {
+      text-decoration: none;
+      color: white;
+  }
+  
+  .social_media .social-button {
+      display: inline-block;
+      margin: 16px;
+      position: relative;
+      cursor: pointer;
+      width: 3.125rem;
+      height: 3.125rem;
+      border: 0.125rem solid transparent;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      color: #fefefe;
+      font-size: 1.5625rem;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 1.6875rem;
+      transition: all 0.5s ease;
+  }
+  
+  .social_media h1 {
+      color: white;
+  }
+  
+  .social_media .social-button:hover,
+  .social_media .social-button:focus {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+  
+  .social_media .fa-twitter,
+  .fa-facebook-f,
+  .fa-linkedin,
+  .fa-youtube,
+  .fa-instagram {
+      font-size: 25px;
+      position: relative;
+      top: 10px;
+  }
+  
+  .social_media .social-button.facebook {
+      background: #3b5998;
+  }
+  
+  .social_media .social-button.facebook:hover,
+  .social_media .social-button.facebook:focus {
+      color: #3b5998;
+      background: #fefefe;
+      border-color: #3b5998;
+  }
+  
+  .social_media .social-button.twitter {
+      background: #55acee;
+  }
+  
+  .social_media .social-button.twitter:hover,
+  .social_media .social-button.twitter:focus {
+      color: #55acee;
+      background: #fefefe;
+      border-color: #55acee;
+  }
+  
+  .social_media .social-button.linkedin {
+      background: #007bb5;
+  }
+  
+  .social_media .social-button.linkedin:hover,
+  .social_media .social-button.linkedin:focus {
+      color: #007bb5;
+      background: #fefefe;
+      border-color: #007bb5;
+  }
+  
+  .social_media .social-button.youtube {
+      background: #bb0000;
+  }
+  
+  .social_media .social-button.youtube:hover,
+  .social_media .social-button.youtube:focus {
+      color: #bb0000;
+      background: #fefefe;
+      border-color: #bb0000;
+  }
+  
+  .social_media .social-button.instagram {
+      background: #125688;
+  }
+  
+  .social_media .social-button.instagram:hover,
+  .social_media .social-button.instagram:focus {
+      color: #125688;
+      background: #fefefe;
+      border-color: #125688;
+  }
+  
+  .social_media {
+      position: relative;
+      left: 200px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #125688;
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+    color: #125688;
+}
+form {
+    margin-bottom: 20px;
+}
+form input,
+form select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stars {
+    display: flex;
+}
+.stars label {
+    font-size: 24px;
+    cursor: pointer;
+}
+.stars label:hover,
+.stars label:hover ~ label {
+    color: orange;
+}
+.stars input[type="radio"] {
+    display: none;
+}
+.stars input[type="radio"]:checked ~ label {
+    color: orange;
+}
+.submit-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #125688;
+}
+.feedback-list {
+    list-style-type: none;
+    padding: 0;
+}
+.feedback-item {
+    border: 1px solid #125688;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+  
+</style>
+<link rel="icon" type="image/x-icon" href="kec.ico">
+<title>KEC Hostel</title>
+</head>
+<body>
+<div class="head">
+         <img src="logo1.png" width="45%" id="logo1">
+      </div>
+      <div class="navbar">
+         <a href="#">Home</a>
+         <a href="facility.html">Facilities</a>
+         <a href="gallery.html">Gallery</a>
+         <a href="contact.html">Contact</a>
+         <a href="review.php">Reviews</a>
+      </div><br><br><br><hr><br><br><br><br>
+      <div class="container">
+        <h1>Hostel Facilities Review</h1>
+        <form id="review-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="room" placeholder="Your Room Number" required>
+            <select name="cleanliness" required>
+                <option value="" disabled selected>Select cleanliness rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="food" required>
+                <option value="" disabled selected>Select food quality rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="facilities" required>
+                <option value="" disabled selected>Select facilities rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="staff" required>
+                <option value="" disabled selected>Select staff behavior rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="experience" required>
+                <option value="" disabled selected>Select overall experience rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+        <h2 style="color:#125688">Feedback History</h2>
+        <ul id="feedback-list" class="feedback-list">
+            <!-- Feedback items will be added here dynamically -->
+        </ul>
+    </div>
+    <br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            var feedbackData = {};
+            formData.forEach(function(value, key) {
+                feedbackData[key] = value;
+            });
+
+            addFeedbackToList(feedbackData);
+            form.reset();
+        });
+
+        function addFeedbackToList(feedbackData) {
+            var feedbackList = document.getElementById('feedback-list');
+            var listItem = document.createElement('li');
+            listItem.classList.add('feedback-item');
+            listItem.innerHTML = `
+                <strong>Name:</strong> ${feedbackData.name}<br>
+                <strong>Room Number:</strong> ${feedbackData.room}<br>
+                <strong>Cleanliness:</strong> ${feedbackData.cleanliness}<br>
+                <strong>Food Quality:</strong> ${feedbackData.food}<br>
+                <strong>Facilities Rating:</strong> ${feedbackData.facilities}<br>
+                <strong>Staff Behavior:</strong> ${feedbackData.staff}<br>
+                <strong>Overall Experience:</strong> ${feedbackData.experience}<br>
+            `;
+            feedbackList.prepend(listItem);
+        }
+    </script>
+    
+
+<footer class = "last">
+<div class="connect">
+   <div class="social_media">
+           <h1>Stay Connected</h1>
+   <a class="social-button facebook" href="https://www.facebook.com/konguengineeringcollegeperundurai" target="_blank">
+   <i class="fab fa-facebook-f"></i></a>
+                       <a class="social-button twitter" href="https://twitter.com/KonguOfficial" target="_blank">
+                       <i class="fab fa-twitter"></i></a>
+                       <a class="social-button youtube" href="https://www.youtube.com/c/konguengineeringcollege" target="_blank">
+                       <i class="fab fa-youtube"></i></a>
+                       <a class="social-button instagram" href="https://www.instagram.com/konguengineeringcollege/" target="_blank">
+                       <i class="fab fa-instagram"></i></a>
+   </div>
+     <div class="address">
+   <h4>KONGU ENGINEERING COLLEGE<br>(Autonomous)</h4>
+   <p>Perundurai,Erode<br>
+   638-060<br>
+   Tamilnadu, India<br>
+   Phone:  04294-226515 <br>
+     <a href="https://www.kongu.ac.in/contact.php">https://www.kongu.ac.in/contact.php</a></p>
+   </div>
+</div>
+</footer>
+
+</body>
+</html>

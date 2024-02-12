@@ -1,0 +1,317 @@
+<html>
+<head>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+<style>
+   * {
+      padding: 0;
+      margin: 0;
+  }
+  
+  /*Navbar*/
+  body {
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+     
+  }
+  
+  #logo1 {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+  }
+  
+  .navbar {
+   text-align: right; /* Aligning navbar links to the right */
+   position: absolute; /* Positioning the navbar */
+   top: 0; /* Aligning it to the top of the page */
+   right: 20px; /* Adjust as needed */
+   z-index: 999; /* Ensuring it's on top of other elements */
+}
+
+.navbar a {
+   padding: 20px 15px; /* Adjust padding for better spacing */
+   color: navy;
+   font-family: Tahoma, sans-serif;
+   text-decoration: none;
+   font-size: 28px;
+}
+
+.navbar a:hover {
+   color: red;
+   text-shadow: 2px 2px 5px #949494;
+}
+
+
+  .main {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .connect {
+      height: 40vh;
+      display: flex;
+      place-items: center;
+      background: navy;
+      font-family: 'Nunito', sans-serif;
+  }
+  
+  footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #f0f0f0; /* Adjust as needed */
+      padding: 20px;
+  }
+  
+  .address {
+      color: white;
+      font-size: 22px;
+      line-height: 35px;
+      position: relative;
+      left: 650px;
+  }
+  
+  .address a {
+      text-decoration: none;
+      color: white;
+  }
+  
+  .social_media .social-button {
+      display: inline-block;
+      margin: 16px;
+      position: relative;
+      cursor: pointer;
+      width: 3.125rem;
+      height: 3.125rem;
+      border: 0.125rem solid transparent;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      color: #fefefe;
+      font-size: 1.5625rem;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 1.6875rem;
+      transition: all 0.5s ease;
+  }
+  
+  .social_media h1 {
+      color: white;
+  }
+  
+  .social_media .social-button:hover,
+  .social_media .social-button:focus {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+  
+  .social_media .fa-twitter,
+  .fa-facebook-f,
+  .fa-linkedin,
+  .fa-youtube,
+  .fa-instagram {
+      font-size: 25px;
+      position: relative;
+      top: 10px;
+  }
+  
+  .social_media .social-button.facebook {
+      background: #3b5998;
+  }
+  
+  .social_media .social-button.facebook:hover,
+  .social_media .social-button.facebook:focus {
+      color: #3b5998;
+      background: #fefefe;
+      border-color: #3b5998;
+  }
+  
+  .social_media .social-button.twitter {
+      background: #55acee;
+  }
+  
+  .social_media .social-button.twitter:hover,
+  .social_media .social-button.twitter:focus {
+      color: #55acee;
+      background: #fefefe;
+      border-color: #55acee;
+  }
+  
+  .social_media .social-button.linkedin {
+      background: #007bb5;
+  }
+  
+  .social_media .social-button.linkedin:hover,
+  .social_media .social-button.linkedin:focus {
+      color: #007bb5;
+      background: #fefefe;
+      border-color: #007bb5;
+  }
+  
+  .social_media .social-button.youtube {
+      background: #bb0000;
+  }
+  
+  .social_media .social-button.youtube:hover,
+  .social_media .social-button.youtube:focus {
+      color: #bb0000;
+      background: #fefefe;
+      border-color: #bb0000;
+  }
+  
+  .social_media .social-button.instagram {
+      background: #125688;
+  }
+  
+  .social_media .social-button.instagram:hover,
+  .social_media .social-button.instagram:focus {
+      color: #125688;
+      background: #fefefe;
+      border-color: hsl(205, 77%, 30%);
+  }
+  
+  .social_media {
+      position: relative;
+      left: 200px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    color: #125688;
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+h2 {
+    color: #125688;
+}
+.user-feedback {
+    margin-bottom: 20px;
+}
+.user-feedback textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.user-feedback button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.user-feedback button:hover {
+    background-color: #125688;
+}
+.feedback-list {
+    list-style-type: none;
+    padding: 0;
+}
+.feedback-date {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.feedback-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+</style>
+<link rel="icon" type="image/x-icon" href="kec.ico">
+<title>KEC Hostel</title>
+</head>
+<body>
+<div class="head">
+         <img src="logo1.png" width="45%" id="logo1">
+      </div>
+      <div class="navbar">
+         <a href="#">Home</a>
+         <a href="facility.html">Facilities</a>
+         <a href="gallery.html">Gallery</a>
+         <a href="contact.html">Contact</a>
+         <a href="review.php">Reviews</a>
+      </div><br><br><br><hr><br><br><br>
+
+      <header>
+        <h1>Daily Feedback</h1>
+    </header>
+    <div class="container">
+        <h2>User Feedback</h2>
+        <div class="user-feedback">
+            <textarea id="feedback-input" placeholder="Enter your feedback"></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+        <h2>Feedback History</h2>
+        <ul id="feedback-list" class="feedback-list">
+            <!-- Feedback items will be added here dynamically -->
+        </ul>
+    </div>
+
+    <script>
+        // Function to submit feedback
+        function submitFeedback() {
+            var feedbackInput = document.getElementById('feedback-input');
+            var feedback = feedbackInput.value.trim();
+            if (feedback !== '') {
+                addFeedbackToList(feedback);
+                feedbackInput.value = ''; // Clear input after submission
+            }
+        }
+
+        // Function to add feedback to the list with date separation
+        function addFeedbackToList(feedback) {
+            var feedbackList = document.getElementById('feedback-list');
+            var currentDate = new Date().toDateString();
+            var lastFeedbackDate = feedbackList.lastElementChild ? feedbackList.lastElementChild.getAttribute('data-date') : null;
+
+            if (lastFeedbackDate !== currentDate) {
+                var dateSeparator = document.createElement('li');
+                dateSeparator.classList.add('feedback-date');
+                dateSeparator.textContent = currentDate;
+                feedbackList.appendChild(dateSeparator);
+            }
+
+            var listItem = document.createElement('li');
+            listItem.classList.add('feedback-item');
+            listItem.textContent = feedback;
+            listItem.setAttribute('data-date', currentDate);
+            feedbackList.appendChild(listItem); // Add new feedback to the list
+        }
+    </script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class = "last">
+<div class="connect">
+   <div class="social_media">
+           <h1>Stay Connected</h1>
+   <a class="social-button facebook" href="https://www.facebook.com/konguengineeringcollegeperundurai" target="_blank">
+   <i class="fab fa-facebook-f"></i></a>
+                       <a class="social-button twitter" href="https://twitter.com/KonguOfficial" target="_blank">
+                       <i class="fab fa-twitter"></i></a>
+                       <a class="social-button youtube" href="https://www.youtube.com/c/konguengineeringcollege" target="_blank">
+                       <i class="fab fa-youtube"></i></a>
+                       <a class="social-button instagram" href="https://www.instagram.com/konguengineeringcollege/" target="_blank">
+                       <i class="fab fa-instagram"></i></a>
+   </div>
+     <div class="address">
+   <h4>KONGU ENGINEERING COLLEGE<br>(Autonomous)</h4>
+   <p>Perundurai,Erode<br>
+   638-060<br>
+   Tamilnadu, India<br>
+   Phone:  04294-226515 <br>
+     <a href="https://www.kongu.ac.in/contact.php">https://www.kongu.ac.in/contact.php</a></p>
+   </div>
+</div>
+</footer>
+</body>
+</html>

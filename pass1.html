@@ -1,0 +1,430 @@
+<html>
+    <title>Pass </title>
+<head>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+<style>
+   * {
+      padding: 0;
+      margin: 0;
+  }
+  
+  /*Navbar*/
+  body {
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+     
+  }
+  
+  #logo1 {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+  }
+  
+  .navbar {
+   text-align: right; /* Aligning navbar links to the right */
+   position: absolute; /* Positioning the navbar */
+   top: 0; /* Aligning it to the top of the page */
+   right: 20px; /* Adjust as needed */
+   z-index: 999; /* Ensuring it's on top of other elements */
+}
+
+.navbar a {
+   padding: 20px 15px; /* Adjust padding for better spacing */
+   color: navy;
+   font-family: Tahoma, sans-serif;
+   text-decoration: none;
+   font-size: 28px;
+}
+
+.navbar a:hover {
+   color: red;
+   text-shadow: 2px 2px 5px #949494;
+}
+
+
+  .main {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .connect {
+      height: 40vh;
+      display: flex;
+      place-items: center;
+      background: navy;
+      font-family: 'Nunito', sans-serif;
+  }
+  
+  footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #f0f0f0; /* Adjust as needed */
+      padding: 05px;
+  }
+  
+  .address {
+      color: white;
+      font-size: 22px;
+      line-height: 35px;
+      position: relative;
+      left: 650px;
+  }
+  
+  .address a {
+      text-decoration: none;
+      color: white;
+  }
+  
+  .social_media .social-button {
+      display: inline-block;
+      margin: 16px;
+      position: relative;
+      cursor: pointer;
+      width: 3.125rem;
+      height: 3.125rem;
+      border: 0.125rem solid transparent;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      color: #fefefe;
+      font-size: 1.5625rem;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 1.6875rem;
+      transition: all 0.5s ease;
+  }
+  
+  .social_media h1 {
+      color: white;
+  }
+  
+  .social_media .social-button:hover,
+  .social_media .social-button:focus {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+  
+  .social_media .fa-twitter,
+  .fa-facebook-f,
+  .fa-linkedin,
+  .fa-youtube,
+  .fa-instagram {
+      font-size: 25px;
+      position: relative;
+      top: 10px;
+  }
+  
+  .social_media .social-button.facebook {
+      background: #3b5998;
+  }
+  
+  .social_media .social-button.facebook:hover,
+  .social_media .social-button.facebook:focus {
+      color: #3b5998;
+      background: #fefefe;
+      border-color: #3b5998;
+  }
+  
+  .social_media .social-button.twitter {
+      background: #55acee;
+  }
+  
+  .social_media .social-button.twitter:hover,
+  .social_media .social-button.twitter:focus {
+      color: #55acee;
+      background: #fefefe;
+      border-color: #55acee;
+  }
+  
+  .social_media .social-button.linkedin {
+      background: #007bb5;
+  }
+  
+  .social_media .social-button.linkedin:hover,
+  .social_media .social-button.linkedin:focus {
+      color: #007bb5;
+      background: #fefefe;
+      border-color: #007bb5;
+  }
+  
+  .social_media .social-button.youtube {
+      background: #bb0000;
+  }
+  
+  .social_media .social-button.youtube:hover,
+  .social_media .social-button.youtube:focus {
+      color: #bb0000;
+      background: #fefefe;
+      border-color: #bb0000;
+  }
+  
+  .social_media .social-button.instagram {
+      background: #125688;
+  }
+  
+  .social_media .social-button.instagram:hover,
+  .social_media .social-button.instagram:focus {
+      color: #125688;
+      background: #fefefe;
+      border-color: #125688;
+  }
+  
+  .social_media {
+      position: relative;
+      left: 200px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #3b5998;
+}
+h1 {
+    position:relative;
+    top: 100px;
+    text-align: center;
+    color: #125688;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #3b5998;
+}
+
+/* Styles for pop-up message */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.popup.show {
+    display: block;
+}
+</style>
+<link rel="icon" type="image/x-icon" href="kec.ico">
+<title>KEC Hostel</title>
+</head>
+<body>
+<div class="head">
+         <img src="logo1.png" width="45%" id="logo1">
+      </div>
+      <div class="navbar">
+         <a href="#">Home</a>
+         <a href="facility.html">Facilities</a>
+         <a href="gallery.html">Gallery</a>
+         <a href="contact.html">Contact</a>
+         <a href="review.php">Reviews</a>
+      </div><br>
+      <h1 >Apply Pass</h1>
+      <div class="container">
+        <div class="form-container">
+            <form id="gatePassForm">
+                <div class="form-group">
+                    <label for="passType">Pass Type:</label>
+                    <select id="passType">
+                        <option value="home">Home Pass</option>
+                        <option value="day">Day Pass</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="outTime">Out Time:</label>
+                    <input type="datetime-local" id="outTime">
+                </div>
+                <div class="form-group">
+                    <label for="inTime">In Time:</label>
+                    <input type="datetime-local" id="inTime">
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason for Pass:</label>
+                    <input type="text" id="reason">
+                </div>
+                <div class="form-group">
+                    <label>Applying To:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="applyingTo" value="advisor"> Advisor</label>
+                        <label><input type="checkbox" name="applyingTo" value="warden"> Warden</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript code for form submission
+        document.getElementById("gatePassForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // You can add your validation and submission logic here
+            alert("Form submitted!");
+        });
+    </script>
+    <div id="popupMessage" class="popup">Pass has been applied!</div>
+    <footer class = "last">
+        <div class="connect">
+           <div class="social_media">
+                   <h2 style="color:#ccc">Stay Connected</h2>
+           <a class="social-button facebook" href="https://www.facebook.com/konguengineeringcollegeperundurai" target="_blank">
+           <i class="fab fa-facebook-f"></i></a>
+                               <a class="social-button twitter" href="https://twitter.com/KonguOfficial" target="_blank">
+                               <i class="fab fa-twitter"></i></a>
+                               <a class="social-button youtube" href="https://www.youtube.com/c/konguengineeringcollege" target="_blank">
+                               <i class="fab fa-youtube"></i></a>
+                               <a class="social-button instagram" href="https://www.instagram.com/konguengineeringcollege/" target="_blank">
+                               <i class="fab fa-instagram"></i></a>
+           </div>
+             <div class="address">
+           <h4>KONGU ENGINEERING COLLEGE<br>(Autonomous)</h4>
+           <p>Perundurai,Erode<br>
+           638-060<br>
+           Tamilnadu, India<br>
+           Phone:  04294-226515 <br>
+             <a href="https://www.kongu.ac.in/contact.php">https://www.kongu.ac.in/contact.php</a></p>
+           </div>
+        </div>
+        </footer>
+</body>
+</html>
